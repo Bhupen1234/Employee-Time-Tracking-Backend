@@ -1,7 +1,7 @@
 const Project = require('../models/project');
 
 const getAllProjects = async () => {
-  return Project.find();
+  return Project.find({});
 };
 
 const getProjectById = async (id) => {
@@ -10,7 +10,8 @@ const getProjectById = async (id) => {
 
 const createProject = async (projectData) => {
   const project = new Project(projectData);
-  return project.save();
+  await project.save();
+  return project;
 };
 
 const updateProject = async (id, updatedData) => {

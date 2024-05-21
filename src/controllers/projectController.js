@@ -26,6 +26,7 @@ const createProject = async (req, res) => {
     const project = await ProjectService.createProject(req.body);
     res.status(201).json(project);
   } catch (error) {
+    console.log(error);
     res.status(400).send(error);
   }
 };

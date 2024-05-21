@@ -12,11 +12,11 @@ const timeLogSchema = new mongoose.Schema({
     required: true
   },
   startTime: {
-    type: Date,
+    type: String,
     required: true
   },
-  endTime: Date,
-  duration: Number,
+  endTime: String,
+  duration: String,
   notes: String,
   
 },{

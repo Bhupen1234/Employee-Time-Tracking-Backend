@@ -2,7 +2,8 @@ const TimeLog = require('../models/timeLog');
 
 const createTimeLog = async (timeLogData) => {
   const timeLog = new TimeLog(timeLogData);
-  return timeLog.save();
+  await timeLog.save();
+  return timeLog ;
 };
 
 const getAllTimeLogs = async () => {

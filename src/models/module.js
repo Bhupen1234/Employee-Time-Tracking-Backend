@@ -10,10 +10,7 @@ const moduleSchema = new mongoose.Schema({
     ref: 'Project'
   },
   description: String,
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
+  
 },{
     timestamps:true
 });

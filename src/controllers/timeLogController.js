@@ -5,6 +5,7 @@ const createTimeLog = async (req, res) => {
     const timeLog = await TimeLogService.createTimeLog(req.body);
     res.status(201).json(timeLog);
   } catch (error) {
+    console.log(error)
     res.status(400).send(error);
   }
 };
