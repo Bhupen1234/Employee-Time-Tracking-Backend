@@ -10,6 +10,7 @@ const taskSchema = new mongoose.Schema({
     ref: 'Module'
   },
   description: String,
+  
   status: {
     type: String,
     enum: ['Todo', 'In Progress', 'Completed'],

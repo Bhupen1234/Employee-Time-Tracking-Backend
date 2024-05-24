@@ -14,9 +14,9 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const {token,role,userId} = await AuthService.loginUser({ email, password });
+    const {token,role,userId,username} = await AuthService.loginUser({ email, password });
 
-    res.json({ token ,role,userId});
+    res.json({ token ,role,userId,username});
   } catch (error) {
     console.log(error);
     res.status(400).send(error.message);

@@ -5,7 +5,9 @@ const getAllTasks = async () => {
 };
 
 const getTaskById = async (id) => {
-  return Task.findById(id);
+ const task = await Task.findById(id);
+ console.log(task);
+ return task;
 };
 
 const createTask = async (taskData) => {

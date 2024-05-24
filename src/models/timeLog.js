@@ -11,9 +11,16 @@ const timeLogSchema = new mongoose.Schema({
     ref: 'Task',
     required: true
   },
+  username:{
+type:String,
+  },
   startTime: {
     type: String,
     required: true
+  },
+  userFilePaths:{
+    type:Array,
+     default:[]
   },
   endTime: String,
   duration: String,

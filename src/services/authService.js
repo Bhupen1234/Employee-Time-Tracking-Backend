@@ -27,7 +27,7 @@ const loginUser = async ({ email, password }) => {
     throw new Error('Invalid credentials');
   }
   const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
-  return {token,role: user.role,userId: user._id};
+  return {token,role: user.role,userId: user._id,username: user.username};
 };
 
 module.exports = { createUser, loginUser };
