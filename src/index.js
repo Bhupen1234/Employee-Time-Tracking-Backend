@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express')
 const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
@@ -44,7 +44,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));  // Serve uploaded files
+app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));  
 
 app.post('/api/time-logs/', authMiddleware.isAuthenticated, upload.array('file', 12), timeLogController.createTimeLog);
 
